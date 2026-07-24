@@ -3,7 +3,7 @@ import Home from "./pages/Home"
 
 const App = () => {
   return (
-    <div>
+    <div className="w-full min-h-screen bg-black text-white">
       <Home />
     </div>
   )
