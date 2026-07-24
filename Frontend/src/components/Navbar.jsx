@@ -9,58 +9,89 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-black text-white px-6 py-4">
+        <nav className="bg-black text-white px-6 py-4 relative">
+            {/* Navbar */}
             <div className="flex items-center justify-between">
 
                 {/* Left */}
                 <div className="flex items-center gap-8">
-                    <img src={logo} alt="Logo" className="w-24" />
+                    <img src={logo} alt="Netflix Logo" className="w-24" />
 
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex gap-6 text-sm">
-                        <li className="cursor-pointer hover:text-gray-400">Home</li>
-                        <li className="cursor-pointer hover:text-gray-400">TV Shows</li>
-                        <li className="cursor-pointer hover:text-gray-400">Movies</li>
-                        <li className="cursor-pointer hover:text-gray-400">My List</li>
-                        <li className="cursor-pointer hover:text-gray-400">Series</li>
+                    <ul className="hidden md:flex gap-6 text-sm font-medium">
+                        <li className="cursor-pointer hover:text-gray-400 transition">
+                            Home
+                        </li>
+                        <li className="cursor-pointer hover:text-gray-400 transition">
+                            TV Shows
+                        </li>
+                        <li className="cursor-pointer hover:text-gray-400 transition">
+                            Movies
+                        </li>
+                        <li className="cursor-pointer hover:text-gray-400 transition">
+                            My List
+                        </li>
+                        <li className="cursor-pointer hover:text-gray-400 transition">
+                            Series
+                        </li>
                     </ul>
                 </div>
 
-                {/* Right */}
+                {/* Desktop Right */}
                 <div className="hidden md:flex items-center gap-5 text-xl">
-                    <IoSearch className="cursor-pointer" />
-                    <IoMdNotificationsOutline className="cursor-pointer" />
-                    <span className="text-sm cursor-pointer">Children</span>
-                    <FaUser className="cursor-pointer" />
+                    <IoSearch className="cursor-pointer hover:text-gray-400 transition" />
+                    <IoMdNotificationsOutline className="cursor-pointer hover:text-gray-400 transition" />
+                    <span className="text-sm cursor-pointer hover:text-gray-400 transition">
+                        Children
+                    </span>
+                    <FaUser className="cursor-pointer hover:text-gray-400 transition" />
+
                 </div>
 
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-3xl"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    {isOpen ? <IoClose /> : <IoMenu />}
-                </button>
+                {/* Mobile Right */}
+                <div className="flex md:hidden items-center gap-4 text-xl">
+                    <IoSearch className="cursor-pointer" />
+                    <IoMdNotificationsOutline className="cursor-pointer hover:text-red-500 transition" />
+                    <FaUser className="cursor-pointer" />
+
+                    <button onClick={() => setIsOpen(!isOpen)}>
+                        {isOpen ? (
+                            <IoClose className="text-3xl" />
+                        ) : (
+                            <IoMenu className="text-3xl" />
+                        )}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden mt-4">
-                    <ul className="flex flex-col gap-4">
-                        <li>Home</li>
-                        <li>TV Shows</li>
-                        <li>Movies</li>
-                        <li>My List</li>
-                        <li>Series</li>
+                <div className="md:hidden mt-4 border-t border-gray-700 pt-4">
+                    <ul className="flex flex-col gap-5 text-center text-lg">
+
+                        <li className="cursor-pointer hover:text-red-500 transition">
+                            Home
+                        </li>
+
+                        <li className="cursor-pointer hover:text-red-500 transition">
+                            TV Shows
+                        </li>
+
+                        <li className="cursor-pointer hover:text-red-500 transition">
+                            Movies
+                        </li>
+
+                        <li className="cursor-pointer hover:text-red-500 transition">
+                            My List
+                        </li>
+
+                        <li className="cursor-pointer hover:text-red-500 transition">
+                            Series
+                        </li>
 
                         <hr className="border-gray-700" />
 
-                        <div className="flex items-center gap-5 text-xl">
-                            <IoSearch />
-                            <IoMdNotificationsOutline />
-                            <span className="text-sm">Children</span>
-                            <FaUser />
-                        </div>
+
                     </ul>
                 </div>
             )}
