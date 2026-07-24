@@ -40,11 +40,8 @@ const Navbar = () => {
                 {/* Desktop Right */}
                 <div className="hidden md:flex items-center gap-5 text-xl">
                     <IoSearch className="cursor-pointer hover:text-gray-400 transition" />
-                    <IoMdNotificationsOutline className="cursor-pointer hover:text-gray-400 transition" />
-                    <span className="text-sm cursor-pointer hover:text-gray-400 transition">
-                        Children
-                    </span>
-                    <FaUser className="cursor-pointer hover:text-gray-400 transition" />
+                    <IoMdNotificationsOutline className="cursor-pointer hover:text-red-500 transition" />
+                    <FaUser className="cursor-pointer hover:text-green-600 transition" />
 
                 </div>
 
@@ -52,7 +49,7 @@ const Navbar = () => {
                 <div className="flex md:hidden items-center gap-4 text-xl">
                     <IoSearch className="cursor-pointer" />
                     <IoMdNotificationsOutline className="cursor-pointer hover:text-red-500 transition" />
-                    <FaUser className="cursor-pointer" />
+                    <FaUser className="cursor-pointer hover:text-green-600 transition-all duration-150" />
 
                     <button onClick={() => setIsOpen(!isOpen)}>
                         {isOpen ? (
