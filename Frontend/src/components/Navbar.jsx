@@ -1,10 +1,10 @@
+// icons
 import { useState } from "react";
 import { IoSearch, IoMenu, IoClose } from "react-icons/io5";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa6";
-
+// import files
 import logo from "../assets/logo.png";
-
 import { NavLinks } from "../Data/data"
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -66,7 +66,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden mt-5 bg-black border-t border-gray-700">
+                <div className="md:hidden mt-5  bg-black border-t border-gray-700">
                     <ul className="flex flex-col items-center gap-5 py-6">
                         {
                             NavLinks.map((item, index) => {
