@@ -9,20 +9,20 @@ export const NavLinks = [
 
 
 //  cards  slider image data
-import card_img1 from "../assets/cards/kungfu_panda.jpg";
-import card_img2 from "../assets/cards/squid_game.jpg";
-import card_img3 from "../assets/cards/squid_challenge.jpg";
-import card_img4 from "../assets/cards/jawan.jpg";
-import card_img5 from "../assets/cards/the_ghost.jpg";
-import card_img6 from "../assets/cards/lucifer.jpg";
-import card_img7 from "../assets/cards/the_railway_men.jpg";
-import card_img8 from "../assets/cards/young_sheldon.jpg";
-import card_img9 from "../assets/cards/sacred_games.jpg";
-import card_img10 from "../assets/cards/adipurush.jpg";
-import card_img11 from "../assets/cards/sukhee.jpg";
-import card_img12 from "../assets/cards/mission_ganj.jpg";
-import card_img13 from "../assets/cards/leo.jpg";
-import card_img14 from "../assets/cards/all_of_us_are_dead.jpg";
+import card_img1 from "../assets/cards/card1.jpg";
+import card_img2 from "../assets/cards/card2.jpg";
+import card_img3 from "../assets/cards/card3.jpg";
+import card_img4 from "../assets/cards/card4.jpg";
+import card_img5 from "../assets/cards/card5.jpg";
+import card_img6 from "../assets/cards/card6.jpg";
+import card_img7 from "../assets/cards/card7.jpg";
+import card_img8 from "../assets/cards/card8.jpg";
+import card_img9 from "../assets/cards/card9.jpg";
+import card_img10 from "../assets/cards/card10.jpg";
+import card_img11 from "../assets/cards/card11.jpg";
+import card_img12 from "../assets/cards/card12.jpg";
+import card_img13 from "../assets/cards/card13.jpg";
+import card_img14 from "../assets/cards/card14.jpg";
 
 export const cards_data = [
     {
