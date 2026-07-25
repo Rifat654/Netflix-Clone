@@ -1,57 +1,60 @@
 import { useState } from "react";
 import { IoSearch, IoMenu, IoClose } from "react-icons/io5";
-import { IoMdNotificationsOutline } from "react-icons/io";
-import { FaUser } from "react-icons/fa6";
+import { MdOutlineNotificationsNone } from "react-icons/md";
+import { FaRegUser } from "react-icons/fa6";
 
 import logo from "../assets/logo.png";
 
+import { NavLinks } from "../Data/data"
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-black text-white px-6 py-4 relative z-10">
-            {/* Navbar */}
-            <div className="flex items-center justify-between">
+        <nav className="bg-black text-white px-6 py-4 relative z-50">
 
-                {/* Left */}
-                <div className="flex items-center gap-8">
-                    <img src={logo} alt="Netflix Logo" className="w-24" />
+            {/* Top Navbar */}
+            <div className="flex justify-between items-center">
 
-                    {/* Desktop Menu */}
-                    <ul className="hidden md:flex gap-6 text-sm font-medium">
-                        <li className="cursor-pointer hover:text-gray-400 transition">
-                            Home
-                        </li>
-                        <li className="cursor-pointer hover:text-gray-400 transition">
-                            TV Shows
-                        </li>
-                        <li className="cursor-pointer hover:text-gray-400 transition">
-                            Movies
-                        </li>
-                        <li className="cursor-pointer hover:text-gray-400 transition">
-                            My List
-                        </li>
-                        <li className="cursor-pointer hover:text-gray-400 transition">
-                            Series
-                        </li>
+                {/* Logo */}
+                <div>
+                    <img src={logo} alt="Logo" className="h-7" />
+                </div>
+
+                {/* Desktop Menu */}
+                <div className="hidden md:block">
+                    <ul className="flex items-center gap-8">
+                        {
+                            NavLinks.map((item, index) => {
+                                return (
+                                    <li key={index} className="hover:text-red-500 cursor-pointer">{item}</li>
+                                )
+                            })
+                        }
                     </ul>
                 </div>
 
-                {/* Desktop Right */}
-                <div className="hidden md:flex items-center gap-5 text-xl">
-                    <IoSearch className="cursor-pointer hover:text-gray-400 transition" />
-                    <IoMdNotificationsOutline className="cursor-pointer hover:text-red-500 transition" />
-                    <FaUser className="cursor-pointer hover:text-green-600 transition" />
+                {/* Right Side */}
+                <div className="flex items-center gap-4">
 
-                </div>
+                    {/* Search - Desktop */}
+                    <form className="hidden md:flex items-center gap-2">
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            className="bg-gray-800 px-3 py-2 rounded-full outline-none"
+                        />
+                        <IoSearch className="cursor-pointer text-xl" />
+                    </form>
 
-                {/* Mobile Right */}
-                <div className="flex md:hidden items-center gap-4 text-xl">
-                    <IoSearch className="cursor-pointer" />
-                    <IoMdNotificationsOutline className="cursor-pointer hover:text-red-500 transition" />
-                    <FaUser className="cursor-pointer hover:text-green-600 transition-all duration-150" />
+                    <MdOutlineNotificationsNone className="cursor-pointer text-2xl" />
 
-                    <button onClick={() => setIsOpen(!isOpen)}>
+                    <FaRegUser className="cursor-pointer text-xl" />
+
+                    {/* Hamburger - Mobile */}
+                    <button
+                        className="md:hidden"
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
                         {isOpen ? (
                             <IoClose className="text-3xl" />
                         ) : (
@@ -63,32 +66,25 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden mt-4 border-t border-gray-700 pt-4">
-                    <ul className="flex flex-col gap-5 text-center text-lg">
+                <div className="md:hidden mt-5 bg-black border-t border-gray-700">
+                    <ul className="flex flex-col items-center gap-5 py-6">
+                        {
+                            NavLinks.map((item, index) => {
+                                return (
+                                    <li key={index} className="hover:text-red-500 cursor-pointer">{item}</li>
+                                )
+                            })
+                        }
 
-                        <li className="cursor-pointer hover:text-red-500 transition">
-                            Home
-                        </li>
-
-                        <li className="cursor-pointer hover:text-red-500 transition">
-                            TV Shows
-                        </li>
-
-                        <li className="cursor-pointer hover:text-red-500 transition">
-                            Movies
-                        </li>
-
-                        <li className="cursor-pointer hover:text-red-500 transition">
-                            My List
-                        </li>
-
-                        <li className="cursor-pointer hover:text-red-500 transition">
-                            Series
-                        </li>
-
-                        <hr className="border-gray-700" />
-
-
+                        {/* Search only for mobile */}
+                        <div className="flex items-center gap-2 mt-3">
+                            <input
+                                type="text"
+                                placeholder="Search"
+                                className="bg-gray-800 px-3 py-2 rounded-full outline-none"
+                            />
+                            <IoSearch className="text-xl cursor-pointer" />
+                        </div>
                     </ul>
                 </div>
             )}
