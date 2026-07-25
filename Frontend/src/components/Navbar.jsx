@@ -10,7 +10,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-transparent text-white px-6 py-3 relative z-50">
+        <nav className="bg-transparent text-white px-6 md:px-3 py-3 relative z-50">
 
             {/* Top Navbar */}
             <div className="flex justify-between items-center">
@@ -21,12 +21,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="hidden md:block">
-                    <ul className="flex items-center gap-8">
+                <div className="hidden lg:block">
+                    <ul className="flex items-center gap-4">
                         {
                             NavLinks.map((item, index) => {
                                 return (
-                                    <li key={index} className="hover:text-red-500 cursor-pointer">{item}</li>
+                                    <li key={index} className="hover:text-red-500 cursor-pointer ">{item}</li>
                                 )
                             })
                         }
@@ -52,7 +52,7 @@ const Navbar = () => {
 
                     {/* Hamburger - Mobile */}
                     <button
-                        className="md:hidden"
+                        className="lg:hidden"
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? (
@@ -66,7 +66,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden mt-5  bg-black border-t border-gray-700">
+                <div className="lg:hidden mt-5  bg-black border-t border-gray-700">
                     <ul className="flex flex-col items-center gap-5 py-6">
                         {
                             NavLinks.map((item, index) => {

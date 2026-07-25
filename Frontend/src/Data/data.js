@@ -81,4 +81,4 @@ export const cards_data = [
         image: card_img14,
         name: "All of Us Are Dead"
     },
-]
+];
