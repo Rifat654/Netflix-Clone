@@ -9,7 +9,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-black text-white px-6 py-4 relative">
+        <nav className="bg-black text-white px-6 py-4 relative z-10">
             {/* Navbar */}
             <div className="flex items-center justify-between">
 
