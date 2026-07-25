@@ -1,17 +1,28 @@
 import Navbar from "../components/Navbar"
-// import Hero from "../assets/Interstellar.jpg"
+import Hero from "../assets/Interstellar.jpg"
 const Home = () => {
     return (
-        <div>
+        <div className="relative w-full">
             <Navbar />
-            {/* Hero Section */}
-            {/* <div className="hero">
-                <img src={Hero} alt="banner image" className="bg-cover w-full h-auto overflow-hidden" />
-                <div className="absolute top-0 left-0 w-full h-full bg-linear-to-b from-black/60 to-black/90">
-                    <h1 className="text-4xl font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">Interstellar</h1>
-                </div>
-            </div> */}
+
+            {/* Hero Image */}
+            <img
+                src={Hero}
+                alt="Interstellar Banner"
+                className="w-full h-[60vh] md:h-screen object-cover"
+            />
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-linear-to-b from-black/50 via-black/40 to-black/90"></div>
+
+            {/* Hero Content */}
+            <div className="absolute inset-0 flex items-center justify-center px-4">
+                <h1 className="text-3xl md:text-6xl font-bold text-white text-center">
+                    Interstellar
+                </h1>
+            </div>
         </div>
+
     )
 }
 

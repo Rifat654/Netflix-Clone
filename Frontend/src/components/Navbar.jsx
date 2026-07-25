@@ -10,7 +10,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-black text-white px-6 py-4 relative z-50">
+        <nav className="bg-transparent text-white px-6 py-3 relative z-50">
 
             {/* Top Navbar */}
             <div className="flex justify-between items-center">
@@ -56,9 +56,9 @@ const Navbar = () => {
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         {isOpen ? (
-                            <IoClose className="text-3xl" />
+                            <IoClose className="text-2xl cursor-pointer" />
                         ) : (
-                            <IoMenu className="text-3xl" />
+                            <IoMenu className="text-2xl cursor-pointer" />
                         )}
                     </button>
                 </div>
