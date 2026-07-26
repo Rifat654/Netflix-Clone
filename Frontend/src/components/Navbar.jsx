@@ -37,7 +37,7 @@ const Navbar = () => {
                 <div className="flex items-center gap-4">
 
                     {/* Search - Desktop */}
-                    <form className="hidden md:flex items-center gap-2">
+                    <form className="hidden lg:flex items-center gap-2">
                         <input
                             type="text"
                             placeholder="Search"

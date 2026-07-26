@@ -6,16 +6,16 @@ import Tittle_cards from "../components/Tittle_cards";
 
 const Home = () => {
     return (
-        <div className=" w-full ">
+        <div className=" w-full h-auto ">
             <Navbar />
 
-            <div className="relative Banner-image w-full h-[80vh] md:h-screen  flex items-center justify-center">
+            <div className="relative Banner-image w-full  h-screen  flex items-center justify-center">
 
                 {/* Hero Image */}
                 <img
                     src={Hero}
                     alt="Interstellar Banner"
-                    className="w-full h-[60vh] md:h-screen object-cover"
+                    className="w-full h-[95vh] sm:h-screen object-cover"
                 />
 
                 {/* Dark Overlay */}
@@ -32,15 +32,14 @@ const Home = () => {
                     </p>
                     <div className="flex flex-row items-center gap-4 mt-4">
 
-                        <div className="flex items-center gap-4 mt-4 bg-white text-black px-4 py-2 rounded-md font-bold hover:bg-gray-300">
+                        <div className="flex items-center gap-4 mt-4 bg-white text-black px-2  md:px-4 py-2 rounded-md font-bold hover:bg-gray-300 cursor-pointer">
                             <IoPlay />
                             <button className="cursor-pointer">
                                 Play
                             </button>
                         </div>
-                        <div className="flex items-center  gap-2 mt-4 bg-white text-black px-2 py-2 rounded-md font-bold hover:bg-gray-300">
+                        <div className="flex items-center  gap-2 mt-4 bg-white text-black px-1 md:px-3 py-2 rounded-md font-bold hover:bg-gray-300 cursor-pointer">
                             <FiInfo />
-
                             <button className="cursor-pointer font-semibold">
                                 More Info
                             </button>
