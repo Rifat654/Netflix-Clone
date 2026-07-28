@@ -1,11 +1,13 @@
 // icons
 import { useState } from "react";
-import { IoSearch, IoMenu, IoClose } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
 import { MdOutlineNotificationsNone } from "react-icons/md";
 import { FaRegUser } from "react-icons/fa6";
 // import files
 import logo from "../assets/logo.png";
 import { NavLinks } from "../Data/data"
+import Search_Btn from "./Search_Btn";
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -34,17 +36,12 @@ const Navbar = () => {
                 </div>
 
                 {/* Right Side */}
-                <div className="flex items-center gap-4">
+                <div className=" flex items-center gap-4 ">
 
                     {/* Search - Desktop */}
-                    <form className="hidden lg:flex items-center gap-2">
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            className="bg-gray-800 px-3 py-2 rounded-full outline-none"
-                        />
-                        <IoSearch className="cursor-pointer text-xl" />
-                    </form>
+                    <div className="hidden lg:block ">
+                        <Search_Btn />
+                    </div>
 
                     <MdOutlineNotificationsNone className="cursor-pointer text-2xl" />
 
@@ -66,8 +63,8 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="lg:hidden mt-5  bg-black border-t border-gray-700">
-                    <ul className="flex flex-col items-center gap-5 py-6">
+                <div className="lg:hidden mt-5  bg-black border-t border-gray-700 ">
+                    <ul className="flex flex-col items-end gap-5 px-5 py-6 transform transition-all duration-300">
                         {
                             NavLinks.map((item, index) => {
                                 return (
@@ -77,13 +74,8 @@ const Navbar = () => {
                         }
 
                         {/* Search only for mobile */}
-                        <div className="flex items-center gap-2 mt-3">
-                            <input
-                                type="text"
-                                placeholder="Search"
-                                className="bg-gray-800 px-3 py-2 rounded-full outline-none"
-                            />
-                            <IoSearch className="text-xl cursor-pointer" />
+                        <div className="flex items-center gap-2 mt-3 ">
+                            <Search_Btn />
                         </div>
                     </ul>
                 </div>
