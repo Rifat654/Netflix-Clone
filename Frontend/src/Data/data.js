@@ -24,6 +24,7 @@ import card_img12 from "../assets/cards/card12.jpg";
 import card_img13 from "../assets/cards/card13.jpg";
 import card_img14 from "../assets/cards/card14.jpg";
 
+
 export const cards_data = [
     {
         image: card_img1,

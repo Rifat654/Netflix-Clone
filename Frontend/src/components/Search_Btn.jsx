@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IoSearch } from "react-icons/io5";
 
 const Search_Btn = () => {
+
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClick = () => {
@@ -13,7 +14,7 @@ const Search_Btn = () => {
     return (
         <div className="relative w-10 h-10">
             <div
-                className={`absolute right-0 top-0 flex items-center justify-center bg-black  border border-gray-500 rounded-full  overflow-hidden transition-all duration-300 ${isOpen ? "w-64 px-3 h-10" : "w-10 h-10 justify-center"
+                className={`absolute right-0 top-0 flex items-center justify-center bg-black  rounded-full  overflow-hidden transition-all duration-300 ${isOpen ? "w-64 px-3 h-10 border-2 border-gray-500 " : "w-9 h-9 justify-center"
                     }`}>
 
                 <input
@@ -23,7 +24,7 @@ const Search_Btn = () => {
                         }`} />
 
                 <button onClick={() => handleClick()} className=" flex items-center justify-center ">
-                    <IoSearch className="text-2xl  cursor-pointer" />
+                    <IoSearch className="text-xl mt-1  cursor-pointer" />
                 </button>
             </div>
         </div>
