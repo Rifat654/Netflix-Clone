@@ -3,6 +3,7 @@ import { FiInfo } from "react-icons/fi";
 import Navbar from "../components/Navbar"
 import Hero from "../assets/Interstellar.jpg"
 import Tittle_cards from "../components/Tittle_cards";
+import Footer from "../components/Footer";
 
 const Home = () => {
     return (
@@ -52,7 +53,8 @@ const Home = () => {
             </div>
 
             <Tittle_cards />
-        </div>
+            <Footer />
+        </div >
 
     )
 }
