@@ -7,7 +7,8 @@ const Tittle_cards = () => {
             <div>
                 <h2 className="text-xl font-bold mb-4">Trending Movies</h2>
             </div>
-            <div className="flex gap-4 px-10 overflow-x-auto flex-nowrap scrollbar-hide scroll-smooth">
+            <div className="flex gap-4 px-10 overflow-x-auto flex-nowrap scrollbar-hide  scroll-smooth">
+
                 {cards_data.map((card, index) => (
                     <div
                         key={index}
