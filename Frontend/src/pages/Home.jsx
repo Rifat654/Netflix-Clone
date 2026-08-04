@@ -2,7 +2,7 @@ import { IoPlay } from "react-icons/io5";
 import { FiInfo } from "react-icons/fi";
 import Navbar from "../components/Navbar"
 import Hero from "../assets/Interstellar.jpg"
-import Tittle_cards from "../components/Tittle_cards";
+import Tittle_card from "../components/Tittle_card";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -52,7 +52,7 @@ const Home = () => {
 
             </div>
 
-            <Tittle_cards />
+            <Tittle_card />
             <Footer />
         </div >
 

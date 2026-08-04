@@ -1,13 +1,13 @@
 
 import { cards_data } from "../Data/data.js";
-const Tittle_cards = () => {
+const Tittle_card = () => {
 
     return (
         <div className="w-full h-full bg-black text-white px-8 py-8">
             <div>
-                <h2 className="text-xl font-bold mb-4">Trending Movies</h2>
+                <h2 className="text-2xl text-left-50 font-bold mb-4">Trending Movies</h2>
             </div>
-            <div className="flex gap-4 px-10 overflow-x-auto flex-nowrap ">
+            <div className="flex gap-4 px-10 overflow-x-auto flex-nowrap hide-scrollbar ">
 
                 {cards_data.map((card, index) => (
                     <div
@@ -32,4 +32,4 @@ const Tittle_cards = () => {
     )
 }
 
-export default Tittle_cards
+export default Tittle_card
