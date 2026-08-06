@@ -51,8 +51,15 @@ const Home = () => {
                 </div>
 
             </div>
+            <div className="pb-16">
+                <Tittle_card tittle="Trending Movies" />
+            </div>
 
-            <Tittle_card />
+            <Tittle_card tittle="Popular" />
+            <Tittle_card tittle="New Releases" />
+            <Tittle_card tittle="Top Rated" />
+
+
             <Footer />
         </div >
 
