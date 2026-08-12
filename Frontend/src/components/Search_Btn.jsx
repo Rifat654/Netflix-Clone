@@ -14,13 +14,13 @@ const Search_Btn = () => {
     return (
         <div className="relative w-10 h-10">
             <div
-                className={`absolute right-0 top-0 flex items-center justify-center bg-black  rounded-full  overflow-hidden transition-all duration-300 ${isOpen ? "w-64 px-3 h-10 border-2 border-gray-500 " : "w-9 h-9 justify-center"
+                className={`absolute right-0 top-0 flex items-center justify-center bg-black  rounded-full  overflow-hidden transition-all duration-300 ${isOpen ? "w-64 px-3 h-10 border-2 border-red-700 " : "w-9 h-9 justify-center"
                     }`}>
 
                 <input
                     type="text"
                     placeholder="Titles, people, genres"
-                    className={`bg-transparent text-white outline-none ml-3 transition-all duration-300 ${isOpen ? "w-full opacity-100" : "w-0 opacity-0"
+                    className={`bg-transparent text-white outline-none ml-3 transition-all duration-300 ${isOpen ? "w-full opacity-100 " : "w-0 opacity-0"
                         }`} />
 
                 <button onClick={() => handleClick()} className=" flex items-center justify-center ">
