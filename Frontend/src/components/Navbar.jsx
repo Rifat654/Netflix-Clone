@@ -43,7 +43,7 @@ const Navbar = () => {
                         <Search_Btn />
                     </div>
 
-                    <MdOutlineNotificationsNone className="cursor-pointer text-2xl" />
+                    <MdOutlineNotificationsNone className="cursor-pointer text-2xl hover:text-red-600" />
 
                     <FaRegUser className="cursor-pointer text-xl" />
 

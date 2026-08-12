@@ -24,7 +24,7 @@ const Search_Btn = () => {
                         }`} />
 
                 <button onClick={() => handleClick()} className=" flex items-center justify-center ">
-                    <IoSearch className="text-xl mt-1  cursor-pointer" />
+                    <IoSearch className="text-xl mt-1  cursor-pointer " />
                 </button>
             </div>
         </div>
