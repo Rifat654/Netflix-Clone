@@ -19,7 +19,7 @@ const Search_Btn = () => {
 
                 <input
                     type="text"
-                    placeholder="Titles, people, genres"
+                    placeholder="Titles Movies  People "
                     className={`bg-transparent text-white outline-none ml-3 transition-all duration-300 ${isOpen ? "w-full opacity-100 " : "w-0 opacity-0"
                         }`} />
 
